@@ -101,7 +101,7 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            
+
             /*width: 50%;*/
             /*padding: 10px,30px,30px,30px;*/
             /*margin: 30px;*/
@@ -128,7 +128,8 @@
             border: 1px solid #afafaf;
             margin-left: auto;
             margin-right: auto;
-            padding: 5px;/*控制放大大小*/
+            padding: 5px;
+            /*控制放大大小*/
             /*max-width: 650px;*/
             height: auto;
             /*width: 50%;*/
@@ -239,15 +240,16 @@
             /*這是三小*/
         }
 
-        .playbgvid{
+        .playbgvid {
             right: 0;
             bottom: 0;
-            width: 100%;
-            height: 100%;
+            width: 1920px;
+            height: 1080px;
             position: fixed;
+            z-index: -1;
         }
 
-        .footertitle{
+        .footertitle {
             line-height: 10px;
             font-size: 30px;
         }
@@ -270,6 +272,7 @@
 
 <body>
 
+    
 
     <div id="mySidenav" class="sidenav">
 
@@ -284,7 +287,7 @@
     <span class="sidenavfont" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span>
 
     <img src="img/kuro.png" class="center" alt="yuuhouse error pic" width="100px">
-    
+
     <p class="h1">YuuHouse (MYH)</p>
     <p class="h2">Hello World/Hello World</p>
 
@@ -318,15 +321,12 @@
     <!---->
     <!--<video autoplay src="img/bgvideo.mp4"  class="playbgvid"></video>-->
 
-    <video autoplay loop >
-        <source src="img/bgvideo.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
+
     <!--<video autoplay muted loop id="playbgvid">
         <source src="img/bgvideo.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
       </video>-->
-   
+
 
 
     <div class="footer">
@@ -335,6 +335,11 @@
         <p>© 2022</p>
 
     </div>
+
+    <video autoplay loop muted class="playbgvid">
+        <source src="img/bgvideo.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
 
     <script>
         function openNav() {
