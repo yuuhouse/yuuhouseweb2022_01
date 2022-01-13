@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>YuuHouse</title>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+
+        body {
+
+            background-color: #E0FAEE;
+            /*網頁底色*/
+        }
+
+        a:link {
+            text-decoration: none;
+            /*連結顏色控制，不要底線*/
+        }
+
+        a:visited {
+            text-decoration: none;
+            /*連結顏色控制，造訪後不要底線*/
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: none;
+            /*連結顏色控制，滑鼠上去後後不要底線*/
+        }
+
+        a:active {
+            text-decoration: none;
+            /*連結顏色控制，滑鼠點擊後後不要底線*/
+        }
+
+        span {
+            font-family: 'Barlow', sans-serif;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-family: 'Barlow', sans-serif;
+            color: black;
+
+        }
+
+
+
+        /*字距、字體記得調*/
+        .h1 {
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Barlow', sans-serif;
+            line-height: 5px;
+            /*margin: 30px;*/
+            /*border: 3px solid green;*/
+            /*padding: 30px;*/
+            /*width: 50%;*/
+        }
+
+        .h2 {
+            text-align: center;
+            font-size: 13px;
+            font-family: 'Roboto Mono', monospace;
+            line-height: 5px;
+            /*margin: 30px;*/
+            /*border: 3px solid green;*/
+            /*padding: 30px;*/
+        }
+
+        .h3 {
+            text-align: center;
+            font-size: 17px;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .h3:hover {
+            /*hover*/
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        /*.h4 {
+            text-align: center;
+            font-size: 17px;
+            font-family: 'Rajdhani', sans-serif;
+        }*/
+
+        .center {
+            /*圖片控制*/
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+            /*width: 50%;*/
+            /*padding: 10px,30px,30px,30px;*/
+            /*margin: 30px;*/
+        }
+
+        .rounded-border {
+            border-radius: 100px;
+            border: 1px solid #afafaf;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 650px;
+            height: auto;
+            /*transition-duration: 0.4s;*/
+            /*height: 60px;*/
+            /*min-width: 450px;*/
+            /*width: 50%;*/
+            /*padding: 20px;*/
+
+        }
+
+        .rounded-border:hover {
+            border-radius: 100px;
+            border: 1px solid #afafaf;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px;/*控制放大大小*/
+            /*max-width: 650px;*/
+            height: auto;
+            /*width: 50%;*/
+            /*min-width: 450px;*/
+            /*height: 60px;*/
+            /*transition-duration: 0.4s;*/
+        }
+
+        .buttonHover {
+            transition-duration: 0.4s;
+
+        }
+
+        /*.container {
+            margin: auto;
+            border: 3px solid green;
+            padding: 20px;
+        }
+
+        .icons {
+            float: none;
+            width: 50px;
+            margin: auto;
+        }*/
+
+        .nav {
+
+            list-style-type: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 60px;
+
+
+        }
+
+        .nav li {
+            display: inline-block;
+            height: 60px;
+            vertical-align: text-top;
+            padding: 7px;
+
+        }
+
+        .nav img {
+            transform: scale(.9);
+            transition-duration: 0.4s;
+            padding: auto;
+        }
+
+        .nav img:hover {
+
+            transform: scale(1.1);
+        }
+
+        /*sidemenusidemenusidemenusidemenu*/
+        /*側邊菜單本體 class不要加大寫*/
+        .sidenav {
+            height: 100%;
+            width: 0;
+            /* 0 width - change this with JavaScript */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Stay on top */
+            top: 0;
+            /* Stay at the top */
+            left: 0;
+            /*貼著左側*/
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+            /* Disable horizontal scroll */
+        }
+
+        /*側邊菜單的連結的css*/
+        .sidenav a {
+            padding: 60px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            font-family: 'Barlow', sans-serif;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav a {
+            color: #f1f1f1;
+        }
+
+        /*共通的就寫一起*/
+        .sidenav .closebtn {
+
+            position: absolute;
+            /*從上面算起0px*/
+            /*從右側算起25px*/
+            top: 0;
+            right: 25px;
+            /*這是用來控制sidenav打開用的文字大小*/
+            font-size: 36px;
+
+            /*margin-left: 50px;*/
+            /*這是三小*/
+        }
+
+        .playbgvid{
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+        }
+
+        .footertitle{
+            line-height: 10px;
+            font-size: 30px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+
+</head>
+
+<!-- 作品照片 左側欄位 -->
+
+<body>
+
+
+    <div id="mySidenav" class="sidenav">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <a href="#">Anime<br>Illustration</a>
+        <a href="#">3D<br>works</a>
+        <a href="#">Motion<br>graphics</a>
+
+    </div>
+
+    <span class="sidenavfont" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span>
+
+    <img src="img/kuro.png" class="center" alt="yuuhouse error pic" width="100px">
+    
+    <p class="h1">YuuHouse (MYH)</p>
+    <p class="h2">Hello World/Hello World</p>
+
+
+
+    <ul class="nav">
+        <li><a href="https://twitter.com/yuuhouse83" target="_blank"><img src="img/twitter.png" alt="error"></a></li>
+        <li><a href="https://www.instagram.com/yuuhouse83/" target="_blank"><img src="img/instagram.png"
+                    alt="error"></a></li>
+        <li><a href="https://www.facebook.com/yuuhouse83" target="_blank"><img src="img/facebook.png" alt="error"></a>
+        </li>
+        <li><a href="https://www.youtube.com/channel/UC3k4dqXd2rDO4IDB6GNMFpg" target="_blank"><img
+                    src="img/youtube.png" alt="error"></a></li>
+        <li><a href="mailto:yuuhouse69@gmail.com" target="_blank"><img src="img/mail.png" alt="error"></a></li>
+
+    </ul>
+
+
+
+    <div class="rounded-border buttonHover">
+        <a href="https://www.pixiv.net/users/29810036" class=button target="_blank">
+            <p class="h3 buttonHover">PIXIV</p>
+        </a>
+    </div>
+    <div class="rounded-border buttonHover">
+        <a href="https://www.artstation.com/yuuhouse" class=button target="_blank">
+            <p class="h3 buttonHover">ArtStation</p>
+        </a>
+
+    </div>
+    <!---->
+    <!--<video autoplay src="img/bgvideo.mp4"  class="playbgvid"></video>-->
+
+    <video autoplay loop >
+        <source src="img/bgvideo.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <!--<video autoplay muted loop id="playbgvid">
+        <source src="img/bgvideo.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>-->
+   
+
+
+    <div class="footer">
+        <p class="footertitle">YuuHouse</p>
+        <p style="line-height: 1px;">Made by YuuHouse</p>
+        <p>© 2022</p>
+
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0px";
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>
