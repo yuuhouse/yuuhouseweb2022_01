@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>YuuHouse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- 作品照片 左側欄位 -->
+
+<body>
+    <div id="mySidenav" class="sidenav">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <a href="index.html">Index<br></a>
+        <a href="anime.html">Anime<br>Illustration</a>
+        <a href="3D.html">3D<br>works</a>
+        <a href="motion.html">Motion<br>graphics</a>
+        <a href="update.html">Patch<br>note</a>
+
+    </div>
+
+    <span class="sidenavfont" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Open</span>
+    <!--拉出選單-->
+    <br>
+    <img src="img/kuro.png" class="center" alt="yuuhouse error pic" width="100px">
+
+    <p class="h1">YuuHouse (MYH)</p>
+    <p class="h2">3D Art/Illustration</p>
+
+    <ul class="nav">
+        <li><a href="https://twitter.com/yuuhouse83" target="_blank"><img src="img/twitter.png" alt="error"></a></li>
+        <li><a href="https://www.instagram.com/yuuhouse83/" target="_blank"><img src="img/instagram.png"
+                    alt="error"></a></li>
+        <li><a href="https://www.facebook.com/yuuhouse83" target="_blank"><img src="img/facebook.png" alt="error"></a>
+        </li>
+        <li><a href="https://www.youtube.com/channel/UC3k4dqXd2rDO4IDB6GNMFpg" target="_blank"><img
+                    src="img/youtube.png" alt="error"></a></li>
+        <li><a href="mailto:yuuhouse69@gmail.com" target="_blank"><img src="img/mail.png" alt="error"></a></li>
+
+    </ul>
+    <div class="rounded-border buttonHover">
+        <a href="https://www.pixiv.net/users/29810036" class=button target="_blank">
+            <p class="h3 buttonHover">PIXIV</p>
+        </a>
+    </div>
+    <div class="rounded-border buttonHover">
+        <a href="https://www.artstation.com/yuuhouse" class=button target="_blank">
+            <p class="h3 buttonHover">ArtStation</p>
+        </a>
+
+    </div>
+    <!-- shift + alt + a = comment -->
+    <!-- put everything here -->
+    <div class="update">
+
+        <p class="h5">2022/1/19</p>
+        <p class="h4">新增了Index的連結。<br>
+            新增了Patch note的頁面。<br>
+            Anime Illustration頁面實裝。<br>
+            3D works頁面實裝。<br>
+            Motion graphics頁面實裝。<br>
+            github測試。
+        </p>
+        
+    </div>
+
+    <div class="update">
+
+        <p class="h5">2022/1/10</p>
+        <p class="h4">現在背景可以自動播影片了，
+            Chromium不允許自動撥放聲音所以只能mute掉，
+            為了易讀性修改字體的weight以及替中間的連結添加半透明白色背景。<br>
+            開始進入github進行測試。</p>
+
+    </div>
+
+    <div class="update">
+
+        <p class="h5">2022/1/14</p>
+        <p class="h4">新增了footer, sidenav,跟icon縮放。</p>
+
+    </div>
+
+    <div class="update">
+
+        <p class="h5">2022/1/08</p>
+        <p class="h4">現在加入了各網站的Icon，可以配合版型移動。</p>
+
+    </div>
+
+
+
+
+
+
+    <br><br><br><br><br><br>
+    <div class="footer">
+        <p class="footertitle"><a href="index.html">YuuHouse</a></p>
+        <p style="line-height: 1px;">Made by YuuHouse</p>
+        <p>© 2022</p>
+
+    </div>
+
+    <video autoplay="autoplay" loop="" muted class="playbgvid">
+        <source src="img/bgvideo.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0px";
+        }
+
+    </script>
+
+</body>
+
+</html>
